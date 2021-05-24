@@ -1,15 +1,16 @@
 const express = require("express");
-const DBConnect = require("./config/db");
 const app = express();
+const DBConnect = require("./config/db");
+const config = require("config");
 
 DBConnect();
+app.use(express.json());
+app.use("/api/users", require("./controllers/api/users"));
+app.use("/api/posts", require("./controllers/api/posts"));
+app.use("/api/profile", require("./controllers/api/profiles"));
+app.use("/api/auth", require("./controllers/api/auth"));
 
-app.get("/", (req, res) => {
-  res.send("Api is up");
-});
-
-const PORT = process.env.PORT || 5000;
-
-app.listen(PORT, () => {
-  console.log("Server is running on port", PORT);
-});
+app.listen(
+  config.get("PORT"),
+  console.log(`The server is running on port ${config.get("PORT")}`)
+);

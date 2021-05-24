@@ -1,3 +1,7 @@
 {
-  "MONGODB": "mongodb+srv://sakrak:sultan776@cluster0.kdiw1.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+  "IRL": "mongodb+srv://sakrak:sultan776@cluster0.kdiw1.mongodb.net/socialMedia?retryWrites=true&w=majority",
+  "PORT": 5000,
+  "SECRET": "bubirgizliparoladir",
+  "CLIENT_ID":"a84778b866de75230bfb",
+  "CLIENT_SECRET":"8ad215e253a2f3a782bcdfc39fca4ea83e8b34a0"
 }
